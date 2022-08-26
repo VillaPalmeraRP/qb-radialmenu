@@ -37,62 +37,6 @@ Config.MenuItems = {
                 type = 'client',
                 event = 'qb-hotdogjob:client:ToggleSell',
                 shouldClose = true
-            }, {
-                id = 'interactions',
-                title = 'Interaction',
-                icon = 'triangle-exclamation',
-                items = {
-                    {
-                        id = 'handcuff',
-                        title = 'Cuff',
-                        icon = 'user-lock',
-                        type = 'client',
-                        event = 'police:client:CuffPlayerSoft',
-                        shouldClose = true
-                    }, {
-                        id = 'playerinvehicle',
-                        title = 'Put In Vehicle',
-                        icon = 'car-side',
-                        type = 'client',
-                        event = 'police:client:PutPlayerInVehicle',
-                        shouldClose = true
-                    }, {
-                        id = 'playeroutvehicle',
-                        title = 'Take Out Of Vehicle',
-                        icon = 'car-side',
-                        type = 'client',
-                        event = 'police:client:SetPlayerOutVehicle',
-                        shouldClose = true
-                    }, {
-                        id = 'stealplayer',
-                        title = 'Rob',
-                        icon = 'mask',
-                        type = 'client',
-                        event = 'police:client:RobPlayer',
-                        shouldClose = true
-                    }, {
-                        id = 'escort',
-                        title = 'Kidnap',
-                        icon = 'user-group',
-                        type = 'client',
-                        event = 'police:client:KidnapPlayer',
-                        shouldClose = true
-                    }, {
-                        id = 'escort2',
-                        title = 'Escort',
-                        icon = 'user-group',
-                        type = 'client',
-                        event = 'police:client:EscortPlayer',
-                        shouldClose = true
-                    }, {
-                        id = 'escort554',
-                        title = 'Hostage',
-                        icon = 'child',
-                        type = 'client',
-                        event = 'A5:Client:TakeHostage',
-                        shouldClose = true
-                    }
-                }
             }
         }
     },
@@ -702,6 +646,67 @@ Config.JobInteractions = {
             event = 'qb-hotdogjob:client:ToggleSell',
             shouldClose = true
         }
+    }
+}
+
+Config.GangInteractions = {
+    ["ballas"] = {
+        {
+            id = 'handcuff',
+            title = 'Cuff',
+            icon = 'user-lock',
+            type = 'client',
+            event = 'police:client:CuffPlayerSoft',
+            shouldClose = true
+        },
+        {
+            id = 'playerinvehicle',
+            title = 'Put In Vehicle',
+            icon = 'car-side',
+            type = 'client',
+            event = 'police:client:PutPlayerInVehicle',
+            shouldClose = true
+        },
+        {
+            id = 'playeroutvehicle',
+            title = 'Take Out Of Vehicle',
+            icon = 'car-side',
+            type = 'client',
+            event = 'police:client:SetPlayerOutVehicle',
+            shouldClose = true
+        },
+        {
+            id = 'stealplayer',
+            title = 'Rob',
+            icon = 'mask',
+            type = 'client',
+            event = 'police:client:RobPlayer',
+            shouldClose = true
+        },
+        {
+            id = 'escort',
+            title = 'Kidnap',
+            icon = 'user-group',
+            type = 'client',
+            event = 'police:client:KidnapPlayer',
+            shouldClose = true
+        },
+        {
+            id = 'escort2',
+            title = 'Escort',
+            icon = 'user-group',
+            type = 'client',
+            event = 'police:client:EscortPlayer',
+            shouldClose = true
+        },
+        {
+            id = 'escort554',
+            title = 'Hostage',
+            icon = 'child',
+            type = 'client',
+            event = 'A5:Client:TakeHostage',
+            shouldClose = true
+        },
     }
 }
 

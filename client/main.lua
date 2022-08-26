@@ -3,6 +3,7 @@ PlayerData = QBCore.Functions.GetPlayerData() -- Setting this for when you resta
 local inRadialMenu = false
 
 local jobIndex = nil
+local gangIndex = nil
 local vehicleIndex = nil
 
 local DynamicMenuItems = {}
@@ -75,6 +76,27 @@ local function SetupJobMenu()
     end
 end
 
+local function SetupGangMenu()
+    local GangMenu = {
+        id = 'ganginteractions',
+        title = 'Gang',
+        icon = 'bomb',
+        items = {}
+    }
+    if Config.GangInteractions[PlayerData.gang.name] and next(Config.GangInteractions[PlayerData.gang.name]) then
+        GangMenu.items = Config.GangInteractions[PlayerData.gang.name]
+    end
+
+    if #GangMenu.items == 0 then
+        if gangIndex then
+            RemoveOption(gangIndex)
+            gangIndex = nil
+        end
+    else
+        gangIndex = AddOption(GangMenu, gangIndex)
+    end
+end
+
 local function SetupVehicleMenu()
     local VehicleMenu = {
         id = 'vehicle',
@@ -88,7 +110,7 @@ local function SetupVehicleMenu()
     if Vehicle ~= 0 then
         VehicleMenu.items[#VehicleMenu.items+1] = Config.VehicleDoors
         if Config.EnableExtraMenu then VehicleMenu.items[#VehicleMenu.items+1] = Config.VehicleExtras end
-        
+
         if not IsVehicleOnAllWheels(Vehicle) then
             VehicleMenu.items[#VehicleMenu.items+1] = {
                 id = 'vehicle-flip',
@@ -137,6 +159,7 @@ local function SetupVehicleMenu()
 end
 
 local function SetupSubItems()
+    SetupGangMenu()
     SetupJobMenu()
     SetupVehicleMenu()
 end
