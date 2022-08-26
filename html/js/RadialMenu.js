@@ -1,6 +1,6 @@
 'use strict';
 
-var DEFAULT_SIZE = 150;
+var DEFAULT_SIZE = 90;
 var MIN_SECTORS  = 3;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -206,7 +206,7 @@ RadialMenu.prototype.createMenu = function (classValue, levelItems, nested) {
 
     var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     svg.setAttribute('class', classValue);
-    svg.setAttribute('viewBox', '-50 -50 100 100');
+    svg.setAttribute('viewBox', '-200 -130 100 100');
     svg.setAttribute('width', self.size);
     svg.setAttribute('height', self.size);
 

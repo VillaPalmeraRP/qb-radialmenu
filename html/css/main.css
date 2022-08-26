@@ -81,17 +81,17 @@ svg.menu > g.sector > use {
 }
 
 svg.menu > g.sector:hover > path {
-    fill: #dc143c;
+    fill: #000000;
 
 }
 
 svg.menu > g.center:hover > circle {
-    fill:#dc143c;
+    fill:#000000;
 }
 
 svg.menu > g.center > circle {
     cursor: pointer;
-    fill: rgb(23 23 23 / 80%);
+    fill: rgba(255, 0, 0, 0.8);
 }
 
 svg.menu > g.center > text,
